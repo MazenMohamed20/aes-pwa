@@ -1,4 +1,4 @@
-const CACHE_NAME = "aes-shell-v1";
+const CACHE_NAME = "aes-shell-v2";
 self.addEventListener("install", event => { self.skipWaiting(); });
 self.addEventListener("activate", event => {
   event.waitUntil(self.clients.claim());

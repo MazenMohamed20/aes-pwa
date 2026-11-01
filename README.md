@@ -5,7 +5,8 @@ This static site gives the AES Streamlit Cloud app its own installable web-app n
 ## Contents
 - `index.html`: full-screen wrapper for `https://aes-archive.streamlit.app/`
 - `manifest.webmanifest`: app name, short name, and PWA icon declarations
-- `icons/aes-192.png`, `icons/aes-512.png`: install icons made from the supplied AES icon
+- `icons/aes.svg`: scalable vector source for the AES mark
+- `icons/aes-192.png`, `icons/aes-512.png`: high-resolution PNG fallbacks rendered from the SVG
 - `apple-touch-icon.png`, `favicon.png`: browser/mobile icons
 - `sw.js`: minimal service worker registration
 
