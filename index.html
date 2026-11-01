@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#123d70">
+  <meta name="application-name" content="AES">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="AES">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" type="image/png" sizes="48x48" href="./favicon.png">
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+  <title>AES Archive | Company System</title>
+  <style>
+    :root { color-scheme: light; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #fff; }
+    .app { position: fixed; inset: 0; width: 100%; height: 100%; border: 0; background: #fff; }
+    .fallback { position: fixed; inset: 0; display: none; align-items: center; justify-content: center; padding: 24px; text-align: center; font: 16px system-ui, sans-serif; background: #f5f7fb; }
+    .fallback a { color: #123d70; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <iframe class="app" title="AES Archive" src="https://aes-archive.streamlit.app/?embed=true&show_footer=false" allow="clipboard-read; clipboard-write; fullscreen"></iframe>
+  <noscript><div class="fallback" style="display:flex">Please enable JavaScript to use AES Archive.</div></noscript>
+  <script>
+    if ("serviceWorker" in navigator && location.protocol === "https:") {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("./sw.js").catch(() => {});
+      });
+    }
+  </script>
+</body>
+</html>
